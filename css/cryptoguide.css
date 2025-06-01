@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+i {
+  color: inherit;
+  font-size: inherit;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+h6 {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #3C42D0;
+}
+
+body {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 14px;
+  overflow-x: hidden;
+  font-weight: 400;
+}
+
+.black {
+  min-height: 100svh;
+  color: #F1F1F1;
+  font-size: clamp(24px, 5vw, 110px);
+  gap: 40px;
+  font-weight: 400;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(50px, 10vw, 100px) clamp(10px, 10vw, 120px);
+}
+
+.white {
+  color: #000;
+  padding: clamp(20px, 10vw, 45px) clamp(10px, 10vw, 120px) clamp(20px, 10vw, 140px) clamp(10px, 10vw, 120px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2vw, 35px);
+  background-color: #F1F1F1;
+}
+
+.white span {
+  font-size: clamp(22px, 5vw, 60px);
+  margin-bottom: 40px;
+}
+
+.white p {
+  font-size: clamp(16px, 5vw, 35px);
+}
+
+h1 span {
+  font-size: clamp(32px, 10vw, 60px);
+}
+
+@media (max-width: 1080px) {
+  h1 span {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+p+span {
+  margin-top: clamp(20px, 2vw, clamp(15px, 2vw, 35px));
+}
+
+.number-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.number-list span {
+  display: inline-block;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.number-list p {
+  padding: 0 clamp(15px, 2vw, 50px);
+}
+
+@media (min-width: 1080px) {
+  .left-text {
+    padding-left: 30%;
+  }
+
+  .mla {
+    margin-left: auto;
+    display: inline-block;
+  }
+}
+
+ol {
+  counter-reset: item;
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vw, 20px);
+  margin-bottom: 65px;
+}
+
+li {
+  display: block;
+  font-size: clamp(16px, 5vw, 35px);
+}
+
+li::before {
+  display: inline-block;
+  margin-right: 5px;
+  content: counter(item) ". ";
+  counter-increment: item;
+  font-size: clamp(18px, 5vw, 48px);
+  font-weight: 600;
+}
+
+.fz50 {
+  font-size: 50px;
+}
+
+.fz40 {
+  font-size: 40px !important;
+}
+
+.mta {
+  margin-top: auto;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.dib {
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: clamp(25px, 3vw, 60px);
+  text-transform: uppercase;
+}
+
+p+.bold {
+  margin-top: 15px;
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: clamp(25px, 5vw, 60px);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h4 span {
+  font-weight: 600;
+  font-size: clamp(20px, 5vw, 45px) !important;
+}
+
+p+h4 {
+  margin-top: clamp(20px, 2vw, 50px);
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(25px, 10vw, 55px);
+  background-color: #000;
+  color: #F1F1F1;
+  padding: clamp(20px, 10vw, 80px) clamp(10px, 10vw, 120px) clamp(10px, 10vw, 50px) clamp(10px, 10vw, 120px);
+}
+
+.header__links {
+  padding: 30px 120px 40px 120px;
+  background-color: #F1F1F1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px 30px;
+}
+
+.header__links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+@media (min-width: 1080px) {
+  .fix {
+    position: sticky;
+    top: 0;
+    animation: fix 0.3s linear;
+  }
+}
+
+@keyframes fix {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1080px) {
+  .header__links {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 10px 15px 10px;
+  }
+
+  .header__links a {
+    font-size: 12px;
+  }
+
+  .fix {
+    position: sticky;
+    top: 0;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0px;
+  }
+
+  .header__top {
+    font-size: 20px;
+    padding: 30px 10px 50px 10px;
+  }
+
+  .header__top svg {
+    width: 20px;
+    height: auto;
+  }
+
+  .black {
+    min-height: 30svh;
+    font-size: 40px;
+    padding: 60px 10px;
+  }
+
+  .white {
+    padding: 60px 10px;
+    gap: 20px;
+  }
+
+  .white span {
+    margin-bottom: 10px;
+    font-size: 35px;
+    line-height: 100%;
+  }
+
+  .white .fz50 {
+    font-size: 22px;
+  }
+
+  .white .fz40 {
+    font-size: 15px;
+  }
+
+  .white p {
+    font-size: 15px;
+  }
+
+  .white li {
+    font-size: 15px;
+  }
+
+  .white li::before {
+    font-size: 15px;
+  }
+
+  .white .number-list span {
+    font-size: 25px;
+  }
+
+  .white .number-list .mla {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .white p+span {
+    margin-top: 10px;
+  }
+
+  #part-8 span {
+    font-size: 36px;
+  }
+
+  h1 span {
+    font-size: 30px;
+    margin-left: 0;
+  }
+
+  .wbreak {
+    word-break: break-all;
+  }
+}
+
+.header-line-link span {
+  position: relative;
+}
+
+.header-line-link span::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.header-line-link.active span:after {
+  background-color: #000;
+}
+
+.flex-inline {
+  display: flex;
+}
+
+.flex-inline svg {
+  height: 60px;
+  margin-top: 3px;
+  width: auto;
+  margin-left: 20px;
+}
+
+@media (max-width: 1080px) {
+  .header__links.fix {
+    max-width: 100svw;
+    overflow-x: scroll;
+    position: fixed;
+    display: flex;
+  }
+
+  .wrapper {
+    overflow-x: hidden;
+  }
+
+  .flex-inline {
+    align-items: center;
+  }
+
+  .flex-inline svg {
+    height: 40px;
+    margin-top: -8px;
+    margin-left: 10px;
+  }
+
+  .word-wrap {
+    font-size: 32px;
+  }
+}
