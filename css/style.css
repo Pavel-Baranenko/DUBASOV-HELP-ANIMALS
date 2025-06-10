@@ -1223,6 +1223,7 @@ h5 {
   background-color: #3B3B3B;
   display: flex;
   align-items: center;
+  margin-bottom: 60px;
   justify-content: center;
 }
 
@@ -1233,7 +1234,7 @@ h5 {
   justify-content: center;
   position: relative;
   flex: 0 1 auto;
-  height: calc(100svh - 190px);
+  height: calc(100svh - 250px);
   margin: auto;
 }
 
@@ -1241,7 +1242,8 @@ h5 {
   position: absolute;
   left: 49%;
   top: 45%;
-  height: 150%;
+  height: auto;
+  width: 93%;
   z-index: 1;
   transform: translateY(-50%) translateX(-50%);
 }
