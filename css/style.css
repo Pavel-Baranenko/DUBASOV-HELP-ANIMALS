@@ -1277,3 +1277,9 @@ h5 {
     flex-direction: column-reverse;
   }
 }
+
+@media (min-width:1080px) {
+  .not-found-box {
+    max-width: 750px;
+  }
+}
